@@ -13,6 +13,7 @@ function sub(){
   store.dispatch(SUB_NUMBER)
 }
 
+changeNumber()
 store.subscribe(()=>{
   changeNumber()
 })
