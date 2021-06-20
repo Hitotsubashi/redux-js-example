@@ -2,5 +2,5 @@
 import { createStore } from 'redux'
 import reducer from './reducer'
 
-const store = createStore(reducer)
+const store = createStore(reducer,{number:3,unit:'mm'})
 export default store
