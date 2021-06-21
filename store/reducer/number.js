@@ -1,3 +1,4 @@
+// 处理action的reducer
 const reducer = (state=0,action)=>{
   switch (action.type) {
     case 'ADD':
