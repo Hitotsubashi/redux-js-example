@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {ADD_NUMBER,SUB_NUMBER} from '../store/action/number'
+import  React  from 'react';
 
-const Number = ({add,number,sub})=>{
+const Number = ({add,number,unit,sub})=>{
     return (
         <div>
             <button onClick={add}>+</button>

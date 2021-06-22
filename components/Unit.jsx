@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {CHANGE_UNIT} from '../store/action/unit'
+import  React  from 'react';
 
 const Unit = ({changeUnit})=>{
     return (
