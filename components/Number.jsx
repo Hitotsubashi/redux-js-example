@@ -14,8 +14,10 @@ const Number = ({add,number,unit,sub})=>{
 }
 
 Number.propTypes={
+    // 定义number和unit，将从store的state中注入
     number: PropTypes.number.isRequired,
     unit: PropTypes.string.isRequired,
+    // 定义add和sub分别用于加和减
     add: PropTypes.func.isRequired,
     sub: PropTypes.func.isRequired,
 }
@@ -24,9 +26,11 @@ const mapStateToProps = ({number,unit}) => ({
     number,unit
 })
   
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
+    // 加和减方法其实都是dispatch对应的action
     add: () => dispatch(ADD_NUMBER),
     sub: () => dispatch(SUB_NUMBER)
 })
 
+// 使用connect把store中的State状态和自定义的用于派发action的方法合并到组件中，组件可通过props调用
 export default connect(mapStateToProps,mapDispatchToProps)(Number)

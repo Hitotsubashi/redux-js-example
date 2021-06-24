@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {CHANGE_UNIT} from '../store/action/unit'
 import  React  from 'react';
 
+// Unit组件逻辑
 const Unit = ({changeUnit})=>{
     return (
         <div>
@@ -14,6 +15,7 @@ const Unit = ({changeUnit})=>{
 }
 
 Unit.propTypes={
+    // 定义changeUnit用于转换单位
     changeUnit: PropTypes.func.isRequired,
 }
 
